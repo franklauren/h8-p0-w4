@@ -9,7 +9,13 @@ function digitPerkalianMinimum(angka) {
             digitPerkalian.push(jumlahIndex);
         }
     }
-    return digitPerkalian.sort()[0];
+    var temp=digitPerkalian[0];             // revisi: tambahan sorting manual
+    for (var k=1; k<digitPerkalian.length; k++) {
+        if (temp>digitPerkalian[k]) {
+            temp=digitPerkalian[k];
+        }
+    }
+    return temp;
 }
   // TEST CASES
   console.log(digitPerkalianMinimum(24)); // 2

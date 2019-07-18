@@ -11,7 +11,7 @@ function changeMe(arr) {
             obj.lastName = arr[i][1];
             obj.gender = arr[i][2];
             obj.age = 2019 - arr[i][3];
-            if (arr[i][3]===undefined) {
+            if (arr[i][3]===undefined || arr[i][3]>2019) {  //tambahan untuk birthyear diatas tahun skrg
                 obj.age = "Invalid Birthyear"
             }
             console.log(obj);

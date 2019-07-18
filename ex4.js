@@ -4,19 +4,19 @@ function cariModus(arr) {
     for (var i = 0; i<arr.length; i++) {
         var modus=0;
         for (var j = 0; j<arr.length; j++) {
-            if (arr[i]===arr[j]) {
+            if (arr[i]===arr[j] && i !== j) {   //revisi, tadinya harus modus == 2, karena ketemu 2x angkanya      
                 modus++;
-                if (modus ===arr.length) {
+                if (modus === arr.length) {
                     return -1;
                 }
-                else if (modus==2) {
+                else {            
                     angkaModus.push(arr[j]);
                 }
             }
         }
     }
     // console.log("modus = " + modus);
-    if (angkaModus == 0) {
+    if (angkaModus == false) {           //klo tidak ada angka modus
         return -1;
     }
     else {
