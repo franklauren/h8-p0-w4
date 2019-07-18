@@ -1,25 +1,26 @@
 function cariModus(arr) {
     // you can only write your code here!
-    var angkaModus=0;
+    var angkaModus=[];
     for (var i = 0; i<arr.length; i++) {
         var modus=0;
         for (var j = 0; j<arr.length; j++) {
             if (arr[i]===arr[j]) {
                 modus++;
-                if (modus>2) {
+                if (modus ===arr.length) {
                     return -1;
                 }
                 else if (modus==2) {
-                    angkaModus = arr[j];
+                    angkaModus.push(arr[j]);
                 }
             }
         }
     }
+    // console.log("modus = " + modus);
     if (angkaModus == 0) {
         return -1;
     }
     else {
-        return angkaModus;
+        return angkaModus[0];
     }
 }
   
