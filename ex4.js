@@ -6,7 +6,7 @@ function cariModus(arr) {
         for (var j = 0; j<arr.length; j++) {
             if (arr[i]===arr[j] && i !== j) {   //revisi, tadinya harus modus == 2, karena ketemu 2x angkanya      
                 modus++;
-                if (modus === arr.length) {
+                if (modus === arr.length-1) {
                     return -1;
                 }
                 else {            
@@ -14,6 +14,7 @@ function cariModus(arr) {
                 }
             }
         }
+        // console.log("modus " + modus);
     }
     // console.log("modus = " + modus);
     if (angkaModus == false) {           //klo tidak ada angka modus
